@@ -26,3 +26,9 @@ git push
 如果有多个远程仓库 或者 多个分支， 并且需要将代码推送到指定仓库的指定分支上，那么在 pull 或者 push 的时候，就需要 按照下面的格式书写：
 git pull 仓库别名 仓库分支名 
 git push 仓库别名 仓库分支名
+
+git其他操作，初始化git仓库（git init,git clone）
+1、git clone
+git clone git://github.com/someone/some_project.git some_project 
+将远程项目完全clone到本地目录some_project
+查看远程仓库：$ git remote -v
