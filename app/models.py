@@ -141,4 +141,11 @@ class AnonymousUser(AnonymousUserMixin):
     def is_administrator(self):
         return False
 
+class Post(db.Model):
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer,primary_keyTrue)
+    body = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.uctnow)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
 login_manager.anonymous_user = AnonymousUser
