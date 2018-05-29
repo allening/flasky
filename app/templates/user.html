@@ -6,6 +6,7 @@ Flasky
 
 {% block page_content %}
 <div class="page-header">
+    <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
     <h1>hello,{{ user.username }}</h1>
     {% if user.username or user.location %}
     <p>
